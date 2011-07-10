@@ -36,6 +36,8 @@ public slots:
 
     bool remove(QString fileName);
 
+    bool unlink(QString fileName);
+
     bool resize(QString filename, qint64 size);
 
     QString symLinktarget(QString linkName);

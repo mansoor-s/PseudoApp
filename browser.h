@@ -6,7 +6,8 @@
 #include <QUrl>
 #include <QWebFrame>
 #include "window.h"
-#include "filesystem.h"
+#include "filesystemdir.h"
+#include "filesystemfile.h"
 
 class Browser : public QWebView
 {
@@ -14,7 +15,8 @@ class Browser : public QWebView
 public:
     Browser(QWidget *parent = 0);
     Window *window;
-    FileSystem *filesystem;
+    FileSystemDir *filesystemdir;
+    FileSystemFile *filesystemfile;
 
 signals:
 

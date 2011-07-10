@@ -40,6 +40,10 @@ bool FileSystemFile::remove(QString fileName) {
     return QFile::remove(fileName);
 }
 
+bool FileSystemFile::unlink(QString fileName) {
+    return QFile::remove(fileName);
+}
+
 
 bool FileSystemFile::resize(QString filename, qint64 size) {
     return QFile::resize(filename, size);

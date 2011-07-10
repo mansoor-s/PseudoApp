@@ -41,11 +41,11 @@ public slots:
 
     void setSize(int width, int height);
 
-    void setOpacity(double opacity);
+    void opacity(double opacity);
 
     double opacity();
 
-    void setTitle(QString text);
+    void title(QString text);
 
     QString title();
 

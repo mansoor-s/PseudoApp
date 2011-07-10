@@ -67,7 +67,7 @@ int Window::width() {
     return this->window->width();
 }
 
-void Window::setOpacity(double opacity) {
+void Window::opacity(double opacity) {
     this->window->setWindowOpacity(qreal(opacity));
 }
 
@@ -82,7 +82,7 @@ QString Window::title() {
 }
 
 
-void Window::setTitle(QString text) {
+void Window::title(QString text) {
     this->window->setWindowTitle(text);
 }
 

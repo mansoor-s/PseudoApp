@@ -12,14 +12,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     browser.cpp \
-    filesystem.cpp \
     window.cpp \
     filesystemfile.cpp \
     filesystemdir.cpp
 
 HEADERS  += \
     browser.h \
-    filesystem.h \
     window.h \
     filesystemfile.h \
     filesystemdir.h
