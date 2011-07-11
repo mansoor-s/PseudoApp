@@ -14,12 +14,14 @@ SOURCES += main.cpp\
     browser.cpp \
     window.cpp \
     filesystemfile.cpp \
-    filesystemdir.cpp
+    filesystemdir.cpp \
+    plugincontainer.cpp
 
 HEADERS  += \
     browser.h \
     window.h \
     filesystemfile.h \
-    filesystemdir.h
+    filesystemdir.h \
+    plugincontainer.h
 
 FORMS    +=
