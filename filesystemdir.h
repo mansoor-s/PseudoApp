@@ -2,8 +2,9 @@
 #define FILESYSTEMDIR_H
 
 #include <QObject>
+#include "plugininterface.h"
 
-class FileSystemDir : public QObject
+class FileSystemDir : public PluginInterface
 {
     Q_OBJECT
 public:

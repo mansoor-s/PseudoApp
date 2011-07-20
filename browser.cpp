@@ -6,17 +6,26 @@ Browser::Browser(QWidget *parent) :
     QUrl *url = new QUrl("http://mansoorsayed.com/PseudoApp App/index.html");
     this->setUrl(*url);
 
-    connect(this->page()->currentFrame(), SIGNAL(javaScriptWindowObjectCleared()), this, SLOT(js_cleared()));
+    connect(this->page()->currentFrame(), SIGNAL(javaScriptWindowObjectCleared()), this, SLOT(jsReset()));
 
-    PluginContainer window("Window", new Window(this));
-    PluginContainer fsDir("FileSystemDir", new FileSystemDir);
-    PluginContainer fsFile("FileSystemFile", new FileSystemFile);
+    //PluginContainer<QString, Window> window("Window", new Window(this));
+
+    //QHash<QString, Window*> window;
+   // window.insert("Window", new Window(this));
+
+
+   // PluginContainer fsDir("FileSystemDir", new FileSystemDir);
+    //PluginContainer fsFile("FileSystemFile", new FileSystemFile);
+
+    //QVector<PluginContainer<QString> > test;
 
     //this->pluginsToAdd.insert()
 }
 
 
-void Browser::js_cleared() {
+
+
+void Browser::jsReset() {
  /*   this->page()->currentFrame()->evaluateJavaScript("window.FileSystem = {};");
     this->page()->currentFrame()->addToJavaScriptWindowObject("Window", this->window);
     this->page()->currentFrame()->addToJavaScriptWindowObject("window.FileSystem.Dir", this->filesystemdir);
@@ -24,3 +33,4 @@ void Browser::js_cleared() {
 
     QString cleanUp = "";*/
 }
+

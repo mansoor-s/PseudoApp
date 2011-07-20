@@ -3,22 +3,25 @@
 
 #include <QObject>
 #include <QWebView>
-#include <QDebug>
+#include "plugininterface.h"
 
-class Window : public QObject
+class Window : public PluginInterface
 {
     Q_OBJECT
 public:
     explicit Window(QObject *parent = 0);
-    explicit Window(QWebView *window);
+    explicit Window(Browser *window);
 
-    void setWindow(QWebView *window);
+    void setWindow(Browser *window);
 
 private:
-    QWebView *window;
+    Browser *window;
 signals:
 
 public slots:
+
+    void jsReset();
+
     void hide();
 
     void show();

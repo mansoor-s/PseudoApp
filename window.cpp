@@ -1,16 +1,27 @@
 #include "window.h"
 
-Window::Window(QObject *parent) : QObject(parent) {
+Window::Window(QObject *parent) : PluginInterface(parent) {
 }
 
 
-Window::Window(QWebView *window) {
+Window::Window(Browser *window) {
+    this->window = window;
+
+    this->setPluginName("Window");
+    this->connect(window->page()->currentFrame(), SIGNAL(javaScriptWindowObjectCleared()), this, SLOT(jsReset()));
+}
+
+
+void Window::setWindow(Browser *window) {
     this->window = window;
 }
 
 
-void Window::setWindow(QWebView *window) {
-    this->window = window;
+void Window::jsReset() {
+
+    this->window->page()->currentFrame()->addToJavaScriptWindowObject("Window", this);
+
+    PluginInterface::jsReset();
 }
 
 

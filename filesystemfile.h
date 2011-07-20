@@ -4,17 +4,23 @@
 #include <QObject>
 #include <QTextStream>
 #include <QFile>
+#include "plugininterface.h"
 
-class FileSystemFile : public QObject
+class FileSystemFile :  public PluginInterface
 {
     Q_OBJECT
 public:
     explicit FileSystemFile(QObject *parent = 0);
+    explicit FileSystemFile(Browser *browser);
+
+private:
+    Browser *Fbrowser;
 
 signals:
 
 public slots:
 
+    void jsReset();
     /*
       -------to implement------
     Permissions	permissions ( const QString & fileName )
