@@ -3,7 +3,7 @@
 Browser::Browser(QWidget *parent) :
     QWebView(parent)
 {
-    QUrl *url = new QUrl("http://mansoorsayed.com/PseudoApp App/index.html");
+    QUrl *url = new QUrl("http://twitter.com");
     this->setUrl(*url);
 
     connect(this->page()->currentFrame(), SIGNAL(javaScriptWindowObjectCleared()), this, SLOT(jsReset()));
