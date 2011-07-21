@@ -15,11 +15,13 @@ SOURCES += main.cpp\
     window.cpp \
     filesystemfile.cpp \
     filesystemdir.cpp \
-    plugininterface.cpp
+    plugininterface.cpp \
+    dbdrivers.cpp
 
 HEADERS  += \
     browser.h \
     window.h \
     filesystemfile.h \
     filesystemdir.h \
-    plugininterface.h
+    plugininterface.h \
+    dbdrivers.h
