@@ -16,7 +16,8 @@ SOURCES += main.cpp\
     filesystemfile.cpp \
     filesystemdir.cpp \
     plugininterface.cpp \
-    dbdrivers.cpp
+    sqlitedriver.cpp \
+    dbdriverinterface.cpp
 
 HEADERS  += \
     browser.h \
@@ -24,4 +25,5 @@ HEADERS  += \
     filesystemfile.h \
     filesystemdir.h \
     plugininterface.h \
-    dbdrivers.h
+    sqlitedriver.h \
+    dbdriverinterface.h

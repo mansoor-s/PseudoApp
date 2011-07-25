@@ -15,6 +15,9 @@ public:
 
 signals:
 
+private:
+    Browser *Dbrowser;
+
 public slots:
     void jsReset();
 

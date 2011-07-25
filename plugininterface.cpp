@@ -1,9 +1,7 @@
 #include "plugininterface.h"
 #include <QDebug>
 
-PluginInterface::PluginInterface(QObject *parent) :
-    QObject(parent)
-{
+PluginInterface::PluginInterface(QObject *parent) : QObject(parent) {
 }
 
 PluginInterface::PluginInterface(Browser *browser) {

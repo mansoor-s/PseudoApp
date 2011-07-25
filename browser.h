@@ -5,9 +5,7 @@
 #include <QWebView>
 #include <QUrl>
 #include <QWebFrame>
-//#include "window.h"
-//#include "filesystemdir.h"
-//#include "filesystemfile.h"
+
 
 class Browser : public QWebView
 {
@@ -15,13 +13,11 @@ class Browser : public QWebView
 public:
     explicit Browser(QWidget *parent = 0);
 
-private:
-    //QVector<PluginContainer(QString)> pluginsToAdd;
-
 signals:
 
 public slots:
     void jsReset();
+    void contextMenuEvent(QEvent *e);
 
 };
 
