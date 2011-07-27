@@ -2,14 +2,18 @@
 #include "browser.h"
 #include "filesystemfile.h"
 #include "filesystemdir.h"
+#include "window.h"
+#include "sqlitedriver.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     Browser *browser = new Browser;
 
-    FileSystemFile *file = new FileSystemFile(browser);
-    FileSystemDir *dir = new FileSystemDir(browser);
+    new Window(browser);
+    new FileSystemFile(browser);
+    new FileSystemDir(browser);
+    new SQLiteDriver(browser);
 
     browser->show();
 
